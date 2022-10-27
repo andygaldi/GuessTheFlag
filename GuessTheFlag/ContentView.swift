@@ -64,9 +64,10 @@ struct ContentView: View {
                             FlagImage(country: countries[number])
                         }
                         .rotation3DEffect(
-                            .degrees(number == tappedFlag ? 360 : 0),
+                            .degrees(tappedFlag == number ? 360 : 0),
                             axis: (x: 0, y: 1, z: 0)
                         )
+                        .opacity(tappedFlag == -1 || tappedFlag == number ? 1.0 : 0.25)
                     }
                 }
                 .frame(maxWidth: .infinity)
