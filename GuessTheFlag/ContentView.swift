@@ -68,6 +68,7 @@ struct ContentView: View {
                             axis: (x: 0, y: 1, z: 0)
                         )
                         .opacity(tappedFlag == -1 || tappedFlag == number ? 1.0 : 0.25)
+                        .scaleEffect(tappedFlag == -1 || tappedFlag == number ? 1.0 : 0.0)
                     }
                 }
                 .frame(maxWidth: .infinity)
